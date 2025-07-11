@@ -1,23 +1,28 @@
+
+---
+
 ### ✅ `README.md`
 
 ```markdown
 # 🧑‍💼 Employee Directory Web Interface
 
-A responsive and interactive Employee Directory built using **HTML**, **CSS**, **Vanilla JavaScript**, and **Freemarker templates** (rendering shell only). This app is fully **frontend-only** and simulates data handling using **localStorage**, with no backend or APIs required.
+A responsive, modern Employee Directory UI built using **HTML**, **CSS**, **Vanilla JavaScript**, and **Freemarker templates** (as a rendering shell).  
+This is a **frontend-only** application using **localStorage** to simulate data handling—no backend or APIs required.
 
 ---
 
 ## 📋 Features
 
-- ✅ Dashboard with Employee Cards
-- ✅ Add/Edit Employee via Form
-- ✅ Client-side Form Validation
-- ✅ Search by Name or Email
-- ✅ Filter by Department and Role
-- ✅ Sort by First Name or Department
-- ✅ Pagination (10/25/50/100)
-- ✅ In-memory Data Storage (localStorage)
-- ✅ Responsive Design for Mobile & Desktop
+- ✅ Dashboard with employee cards
+- ✅ Add/Edit employees using a dynamic form
+- ✅ Client-side validation
+- ✅ Real-time search by name or email
+- ✅ Filter by department and role
+- ✅ Sort by first name or department
+- ✅ Paginated views (10 / 25 / 50 / 100 items)
+- ✅ Data persisted via `localStorage`
+- ✅ Fully responsive layout (mobile/tablet/desktop)
+- ✅ Modern theme, animations, and styled UI components
 
 ---
 
@@ -31,14 +36,14 @@ employee-directory/
 │   └── form.ftl              # Add/Edit employee form
 ├── static/
 │   ├── css/
-│   │   └── style.css         # Styling
+│   │   └── style.css         # Styling and animations
 │   └── js/
-│       ├── app.js            # Dashboard interactivity
-│       └── form.js           # Form validation & save
+│       ├── app.js            # Dashboard logic
+│       └── form.js           # Form handling
 ├── data/
-│   └── employees.json        # \[Optional] mock data (unused in final)
-├── server.js                 # Optional (for local Freemarker rendering)
-├── README.md                 # You're reading this
+│   └── employees.json        # \[Optional] mock data
+├── server.js                 # Optional server for Freemarker rendering
+├── README.md                 # Project info (you’re here)
 
 ````
 
@@ -48,52 +53,62 @@ employee-directory/
 
 ### 🧱 Prerequisites
 
-- Node.js installed (only if using Freemarker locally via server.js)
-- Or open `dashboard.ftl` and `form.ftl` in browser if pre-rendered
+- **Node.js** (if using `server.js` to render Freemarker locally)
+- Or simply open the `.ftl` files in a browser if already rendered
 
 ### 📦 Setup
 
 ```bash
-git clone https://github.com/your-username/employee-directory.git
+git clone https://github.com/KARTHIKEYAN0807/-Employee-Directory-Web-Interface.git
 cd employee-directory
 npm install
 node server.js
 ````
 
 Then open:
-➡️ `http://localhost:3000/` for Dashboard
-➡️ `http://localhost:3000/form` for Add/Edit page
 
-> You can also serve `.ftl` files using Spring Boot (optional).
+* `http://localhost:3000/` → Dashboard
+* `http://localhost:3000/form` → Add/Edit Employee
+
+> ✅ Alternatively, integrate `.ftl` templates with Spring Boot (if needed)
 
 ---
 
 ## 🖼️ Screenshots
 
-> *Screenshots go here (dashboard + form + filters + mobile view)*
-> Add via GitHub UI or `![desc](screenshot.png)` in markdown
+> *(Add screenshots via GitHub UI or link local images here)*
+
+* ![Dashboard](screenshots/dashboard.png)
+* ![Form Page](screenshots/form.png)
+* ![Responsive View](screenshots/mobile.png)
 
 ---
 
 ## 🤔 Reflection
 
-### ✅ Challenges Faced:
+### 💡 Challenges
 
-* Managing pagination + filtering simultaneously
-* Keeping Freemarker integration light while relying on JS
-* Ensuring full responsiveness without CSS frameworks
+* Handling filters, search, and pagination together efficiently
+* Keeping the UI modern without a CSS framework
+* Minimal use of Freemarker while relying on JS
 
-### ✅ What I'd Improve:
+### 🌟 Improvements (Future)
 
-* Add modal-based form instead of navigating to a separate form page
-* Use IndexedDB for more structured local data handling
-* Add image/avatar support per employee
+* Add modal-based forms (no redirect)
+* Use IndexedDB for structured client-side storage
+* Upload employee images/avatars
 
 ---
 
 ## 📝 License
 
-This project is free to use for educational or demonstration purposes.
+This project is open for educational and demo purposes.
+Feel free to clone, extend, and customize it to suit your needs.
 
 ---
 
+👨‍💻 Built with ❤️ by [Karthikeyan](https://github.com/KARTHIKEYAN0807)
+
+```
+
+---
