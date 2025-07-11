@@ -1,0 +1,20 @@
+# Ignore system-level folders accidentally referenced
+../../*
+
+# Allow your actual project folder
+!/employee-directory/**
+
+# Ignore common system and temp files
+*.log
+*.ini
+*.lnk
+.DS_Store
+Thumbs.db
+
+# Ignore IDE-related files
+.vscode/
+.idea/
+node_modules/
+dist/
+build/
+.env
