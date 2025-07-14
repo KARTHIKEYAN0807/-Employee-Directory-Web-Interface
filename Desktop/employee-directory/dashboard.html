@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Employee Directory</title>
+  <link rel="stylesheet" href="../static/css/style.css" />
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="nav-brand">Employee Directory</div>
+    <div class="nav-actions">
+      <input type="text" id="navSearch" placeholder="Search by name or email..." />
+      <button class="filter-toggle-btn" onclick="toggleFilters()">🔍 Filter</button>
+      <a href="form.html">
+        <button class="primary-btn">➕ Add Employee</button>
+      </a>
+    </div>
+  </nav>
+
+  <!-- Filter Controls (Hidden by Default) -->
+  <div class="filter-section" id="filterSection">
+    <div class="controls">
+      <select id="sortBy">
+        <option value="">Sort By</option>
+        <option value="firstName">First Name</option>
+        <option value="department">Department</option>
+      </select>
+
+      <select id="filterDepartment">
+        <option value="">Filter by Department</option>
+        <option value="Engineering">Engineering</option>
+        <option value="Marketing">Marketing</option>
+      </select>
+
+      <select id="filterRole">
+        <option value="">Filter by Role</option>
+        <option value="Developer">Developer</option>
+        <option value="Manager">Manager</option>
+      </select>
+    </div>
+  </div>
+
+  <!-- Pagination -->
+  <div class="pagination">
+    <label>
+      Items per page:
+      <select id="itemsPerPage">
+        <option value="10" selected>10</option>
+        <option value="25">25</option>
+        <option value="50">50</option>
+        <option value="100">100</option>
+      </select>
+    </label>
+
+    <div id="paginationControls">
+      <button id="prevPage">Previous</button>
+      <span id="pageInfo">Page 1</span>
+      <button id="nextPage">Next</button>
+    </div>
+  </div>
+
+  <!-- Employee Cards -->
+  <div id="employeeList" class="employee-container"></div>
+
+  <!-- Footer / Contact Section -->
+  <footer class="footer">
+    <p>📬 Contact: <a href="mailto:hr@company.com">hr@company.com</a> | ☎️ +91-9876543210</p>
+    <p>© 2025 Employee Directory App. All rights reserved.</p>
+  </footer>
+
+  <script>
+    function toggleFilters() {
+      const filterSection = document.getElementById('filterSection');
+      filterSection.classList.toggle('visible');
+    }
+  </script>
+  <script src="../static/js/app.js"></script>
+</body>
+</html>
